@@ -1,0 +1,118 @@
+@import 'variables';
+
+.table thead th,
+.table th {
+	border: 0px;
+}
+
+.table {
+	tr {
+		td,
+		th {
+			background: $white;
+			line-height: normal;
+			padding: 16px 8px 16px;
+			transition: all 0.3s ease-in-out;
+
+			&:first-child {
+				left: 0;
+				max-width: 300px;
+				min-width: 200px;
+				padding-left: 0;
+				position: sticky;
+				z-index: 1;
+
+				&::after {
+					display: block;
+					width: 1px;
+					background: $grey3;
+					content: ' ';
+					position: absolute;
+					right: 0;
+					top: 0;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	thead {
+    border-bottom: 2px solid $grey2;
+		th {
+			color: $primary;
+			font-size: 11px;
+			font-weight: bold;
+			text-transform: uppercase;
+			white-space: nowrap;
+
+			.material-icons {
+				font-size: 14px;
+				line-height: normal;
+				margin-left: 5px;
+				position: relative;
+				top: 3px;
+			}
+
+			&.hasorder {
+				cursor: pointer;
+
+				&:hover {
+					color: $secondary;
+				}
+			}
+
+			&.active-order {
+				color: $primary;
+				border-bottom: 2px solid $primary;
+			}
+
+			&.hasicon {
+				font-size: 28px;
+				padding: 4px 8px;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			td {
+				color: $dark3;
+				font-size: 14px;
+				font-weight: normal;
+
+				&:first-child {
+					color: $dark2;
+				}
+			}
+
+			&:hover {
+				th,
+				td {
+					background: #fcfcfc;
+				}
+
+				.product-status {
+					height: 34px;
+					transition: height 500ms;
+				}
+			}
+		}
+	}
+
+	.product-status {
+		width: 4px;
+		height: 12px;
+		border-radius: 4px;
+		margin-right: 10px;
+		background-color: $primary;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+@media (min-width: 900px) {
+	.table {
+		display: table;
+	}
+}

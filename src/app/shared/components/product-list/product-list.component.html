@@ -1,0 +1,28 @@
+<div class="row px-3">
+  <div class="col">
+    <h2>{{title}}</h2>
+  </div>
+</div>
+<div class="row mt-3 px-3">
+  <ng-container *ngFor="let product of products">
+
+    <div class="col-12 col-lg-6 mb-2 px-3" (click)="onClick.emit(product)">
+      <div class="row p-3 product">
+        <div class="col">
+          <div class="row h-100 d-flex flex-column justify-content-between">
+            <div class="col-auto product-name">{{product.name}}</div>
+            <div class="col text-left product-description my-2" [matTooltip]="product.description"
+              [matTooltipPosition]="'above'" [matTooltipShowDelay]="500" [matTooltipHideDelay]="500">
+              {{product.description}}
+            </div>
+            <div class="col-auto product-price">{{product.price | currency:'BRL':'symbol-narrow'}}</div>
+          </div>
+        </div>
+        <div class="col-auto">
+          <img class="product-photo" [src]="product.photo" alt="">
+        </div>
+      </div>
+    </div>
+
+  </ng-container>
+</div>

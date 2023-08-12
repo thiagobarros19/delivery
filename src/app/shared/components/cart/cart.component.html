@@ -1,0 +1,75 @@
+<div class="cart container-fluid">
+
+  <ng-container *ngIf="!products.length">
+    <div class="row justify-content-center align-items-center d-flex flex-column p-3 cart-cart">
+      <div class="col-12 text-center cart-empty mb-2">
+        <lucide-icon name="shopping-cart" size="60"></lucide-icon>
+      </div>
+      <div class="col-12 text-center cart-empty">
+        <span>Sacola vazia</span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="products.length">
+    <div class="row p-3 cart-cart">
+      <div class="col-12">
+        <div class="row justify-content-between align-items-center px-3 mb-3">
+          <div class="col-auto">Sua sacola</div>
+          <div class="col-auto">
+            <button mat-button>Limpar</button>
+          </div>
+        </div>
+        <ng-container *ngFor="let product of products">
+          <div class="product p-3 mt-3">
+            <div class="row justify-content-between align-items-center mb-2">
+              <div class="col product-name">
+                {{ product.name }}
+              </div>
+              <div class="col text-end product-price">
+                {{ product.price | currency:'BRL':'symbol-narrow' }}
+              </div>
+            </div>
+            <div class="row align-items-end">
+              <div class="col">
+                <div class="row">
+                  <div class="col-12 product-description" [matTooltip]="product.description"
+                    [matTooltipPosition]="'above'" [matTooltipShowDelay]="500" [matTooltipHideDelay]="500">
+                    {{ product.description }}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 product-remove-btn">
+                    <button mat-button>Remover</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <img class="product-photo" [src]="product.photo" alt="">
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="products.length">
+    <div class="row p-3 justify-content-between cart-result">
+      <div class="col-auto">
+        Total:
+      </div>
+      <div class="col-auto">
+        {{ getTotalValue(products) | currency:'BRL':'symbol-narrow' }}
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="row cart-btn px-2 py-3">
+    <div class="col-12">
+      <button mat-flat-button [disabled]="!products.length" (click)="openOrderDialog()">
+        {{products.length ? 'Finalizar pedido' : 'Sacola vazia'}}
+      </button>
+    </div>
+  </div>
+</div>

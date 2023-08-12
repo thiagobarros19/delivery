@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Rubik:wght@300;400;600;700&display=swap');
+
+@import 'variables';
+@import 'globals';
+@import 'components/components';
+
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+@import '../../../node_modules/@angular/material/theming';
+@include mat-core();
+
+html,
+body {
+	width: 100%;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+	line-height: 1.6;
+	background: $white;
+  font-family: 'Rubik', sans-serif;
+  color: $text;
+
+	scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+[tabindex='-1']:focus {
+	outline: none;
+}
+
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	height: 0;
+}
+
+select,
+button,
+textarea,
+input {
+	vertical-align: baseline;
+}
+div {
+	box-sizing: border-box;
+}
+html,
+body {
+	&[dir='rtl'],
+	&[dir='ltr'] {
+		unicode-bidi: embed;
+	}
+}
+bdo[dir='rtl'] {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+bdo[dir='ltr'] {
+	direction: ltr;
+	unicode-bidi: bidi-override;
+}
+
+img {
+	max-width: 100%;
+}
+a,
+a:focus,
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+blockquote {
+	border-left: 2px solid $gray-200;
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.01625rem;
+}
+.close:not(:disabled):not(.disabled):hover,
+.close:not(:disabled):not(.disabled):focus {
+	outline: none;
+}
+.o-hidden {
+	overflow: hidden;
+}
+.separator-breadcrumb {
+	margin-bottom: 2rem;
+}
+
+@for $i from 1 through 5 {
+	.line-height-#{$i} {
+		line-height: #{$i};
+	}
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+}
+
+.material-icons-outlined {
+	font-family: 'Material Icons Outlined';
+}

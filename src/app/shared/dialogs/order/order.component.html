@@ -1,0 +1,97 @@
+<mat-dialog-content>
+  <div class="container p-3 align-middle order-container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Finalizar pedido</h1>
+      </div>
+      <div class="col-6 products">
+        <ng-container *ngFor="let product of products">
+          <div class="product p-3 mt-3">
+            <div class="row justify-content-between align-items-center mb-2">
+              <div class="col product-name">
+                {{ product.name }}
+              </div>
+              <div class="col text-end product-price">
+                {{ product.price | currency:'BRL':'symbol-narrow' }}
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <div class="row">
+                  <div class="col-12 product-description">{{ product.description }}</div>
+                </div>
+              </div>
+              <div class="col-auto text-end">
+                <img class="product-photo" [src]="product.photo" alt="">
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="col-6 p-3">
+        <form [formGroup]="form">
+          <div class="row order-form p-3">
+            <div class="col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Seu nome" formControlName="name">
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Telefone</mat-label>
+                <input matInput placeholder="(99) 99999-9999" formControlName="phone">
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>CEP</mat-label>
+                <input matInput placeholder="00000-000" formControlName="cep">
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Rua</mat-label>
+                <input matInput placeholder="Rua / Avenida" formControlName="address">
+              </mat-form-field>
+            </div>
+            <div class="col-12 col-md-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Bairro</mat-label>
+                <input matInput placeholder="Bairro" formControlName="neighborhood">
+              </mat-form-field>
+            </div>
+            <div class="col-12 col-md-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Complemento</mat-label>
+                <input matInput placeholder="Complemento" formControlName="complement">
+              </mat-form-field>
+            </div>
+            <div class="col-12 col-md-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Cidade</mat-label>
+                <input matInput placeholder="Cidade" formControlName="city">
+              </mat-form-field>
+            </div>
+            <div class="col-12 col-md-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Estado</mat-label>
+                <input matInput placeholder="Estado" formControlName="state">
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 btn-submit d-flex justify-content-end">
+        <button mat-flat-button (click)="onCancelClick()" class="btn mx-3 btn-cancel">Cancelar</button>
+        <button mat-flat-button (click)="onConfirmClick()" class="btn mx-3 btn-confirm">Finalizar</button>
+      </div>
+    </div>
+  </div>
+</mat-dialog-actions>

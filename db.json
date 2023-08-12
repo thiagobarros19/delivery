@@ -1,0 +1,153 @@
+{
+  "menu": {
+    "highlights": [
+      {
+        "id": 1,
+        "name": "Cheeseburger Clássico",
+        "description": "Delicioso hambúrguer clássico com carne suculenta, queijo derretido, alface fresca, tomate maduro e molho especial em um pão macio.",
+        "price": 19.99,
+        "photo": "assets/images/burgers/cheeseburger-classico.png"
+      },
+      {
+        "id": 2,
+        "name": "Hambúrguer Vegano",
+        "description": "Hambúrguer vegano saboroso feito com ingredientes naturais e servido com alface, tomate, cebola e molho vegano.",
+        "price": 16.99,
+        "photo": "assets/images/burgers/hamburguer-vegano.png"
+      },
+      {
+        "id": 3,
+        "name": "Bacon Lovers Burger",
+        "description": "Um hambúrguer suculento coberto com bacon crocante, queijo cheddar e molho barbecue.",
+        "price": 23.99,
+        "photo": "assets/images/burgers/hamburguer-bacon-lovers.png"
+      }
+    ],
+    "hamburgers": [
+      {
+        "id": 4,
+        "name": "Hambúrguer Bacon Explosion",
+        "description": "Uma explosão de sabor com carne suculenta, bacon crocante, queijo derretido e molho especial.",
+        "price": 26.99,
+        "photo": "assets/images/burgers/hamburguer-bacon-explosion.png"
+      },
+      {
+        "id": 5,
+        "name": "Hambúrguer Frango Grelhado",
+        "description": "Hambúrguer de frango grelhado com alface, tomate e maionese caseira.",
+        "price": 19.99,
+        "photo": "assets/images/burgers/hamburguer-frango-grelhado.png"
+      },
+      {
+        "id": 6,
+        "name": "Hambúrguer Cheddar Supremo",
+        "description": "Carne suculenta, queijo cheddar derretido, cebola caramelizada e molho especial.",
+        "price": 26.99,
+        "photo": "assets/images/burgers/hamburguer-cheddar-supremo.png"
+      },
+      {
+        "id": 7,
+        "name": "Hambúrguer Picanha Premium",
+        "description": "Hambúrguer de picanha suculenta com alface, tomate e molho gourmet.",
+        "price": 32.99,
+        "photo": "assets/images/burgers/hamburguer-picanha-premium.png"
+      },
+      {
+        "id": 8,
+        "name": "Hambúrguer BBQ Ranch",
+        "description": "Carne suculenta, queijo cheddar, bacon, cebola crispy e molho ranch.",
+        "price": 26.49,
+        "photo": "assets/images/burgers/hamburguer-bbq-ranch.png"
+      },
+      {
+        "id": 9,
+        "name": "Hambúrguer Fogo Caliente",
+        "description": "Hambúrguer picante com pimenta jalapeño, queijo pepper jack e molho de pimenta.",
+        "price": 26.99,
+        "photo": "assets/images/burgers/hamburguer-fogo-caliente.png"
+      },
+      {
+        "id": 10,
+        "name": "Hambúrguer Cogumelo Gourmet",
+        "description": "Hambúrguer com cogumelos salteados, queijo suíço e molho trufado.",
+        "price": 32.99,
+        "photo": "assets/images/burgers/hamburguer-cogumelo-gourmet.png"
+      },
+      {
+        "id": 11,
+        "name": "Hambúrguer Clássico com Ovo",
+        "description": "Carne suculenta, queijo, bacon, ovo frito e molho especial.",
+        "price": 23.99,
+        "photo": "assets/images/burgers/hamburguer-classico-ovo.png"
+      },
+      {
+        "id": 12,
+        "name": "Hambúrguer Vegetariano de Grão-de-Bico",
+        "description": "Delicioso hambúrguer vegetariano feito com grão-de-bico e temperos especiais.",
+        "price": 19.99,
+        "photo": "assets/images/burgers/hamburguer-vegetariano.png"
+      },
+      {
+        "id": 13,
+        "name": "Hambúrguer Ranchero",
+        "description": "Carne suculenta, queijo cheddar, molho barbecue e anéis de cebola.",
+        "price": 26.49,
+        "photo": "assets/images/burgers/hamburguer-ranchero.png"
+      }
+    ],
+    "combos": [
+      {
+        "id": 14,
+        "name": "Combo Duplo Delícia",
+        "description": "Dois hambúrgueres clássicos, batatas fritas crocantes e duas bebidas à sua escolha.",
+        "price": 34.99,
+        "photo": "assets/images/burgers/combo-duplo-delicia.png"
+      },
+      {
+        "id": 15,
+        "name": "Combo Família",
+        "description": "Três hambúrgueres, batatas fritas grandes e quatro bebidas à sua escolha. Perfeito para compartilhar!",
+        "price": 49.99,
+        "photo": "assets/images/burgers/combo-familia.png"
+      },
+      {
+        "id": 16,
+        "name": "Combo Veggie",
+        "description": "Dois hambúrgueres vegetarianos, batatas fritas e duas bebidas refrescantes.",
+        "price": 29.99,
+        "photo": "assets/images/burgers/combo-veggie.png"
+      }
+    ],
+    "drinks": [
+      {
+        "id": 17,
+        "name": "Coca-cola",
+        "description": "Coca cola 350ML",
+        "price": 5.99,
+        "photo": "assets/images/drinks/coca-cola.png"
+      },
+      {
+        "id": 18,
+        "name": "Limonada Fresca",
+        "description": "Limonada refrescante feita na hora.",
+        "price": 4.99,
+        "photo": "assets/images/drinks/limonada.png"
+      },
+      {
+        "id": 19,
+        "name": "Pepsi",
+        "description": "Pepsi 350ML",
+        "price": 2.99,
+        "photo": "assets/images/drinks/pepsi.png"
+      },
+      {
+        "id": 20,
+        "name": "Suco de Laranja Natural",
+        "description": "Suco de laranja fresco e natural.",
+        "price": 5.99,
+        "photo": "assets/images/drinks/suco-laranja.png"
+      }
+    ]
+  },
+  "orders": []
+}

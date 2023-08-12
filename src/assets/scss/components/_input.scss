@@ -1,0 +1,64 @@
+@import 'variables';
+
+::ng-deep {
+  .mat-form-field-appearance-outline, .mat-form-field, mat-form-field {
+    .mat-form-field-outline {
+      caret-color: pink !important;
+      color: pink !important;
+      // opacity: 1!important;
+    }
+
+    .placeholder {
+      color: $green !important;
+    }
+
+    .mat-focused {
+      .mat-form-field-outline-thick {
+        color: $white !important;
+        caret-color: orange !important;
+        border-color: orange !important;
+      }
+    }
+
+    .mat-form-field-invalid {
+      .mat-form-field-outline-thick {
+        color: $white !important;
+        opacity: 0.8 !important;
+      }
+    }
+  }
+
+  .mat-form-field {
+    .mat-focused {
+      .mat-form-field-label {
+        color: $white !important;
+      }
+    }
+
+    .mat-form-field-invalid {
+      .mat-form-field-label {
+        color: $red !important;
+      }
+    }
+
+    .mat-input-element {
+      caret-color: green
+    }
+  }
+
+  .mat-form-field-invalid, .mat-warn {
+    .mat-input-element {
+      caret-color: $red !important;
+    }
+  }
+
+  .mat-input-element {
+    caret-color: $white !important;
+    color: $white !important;
+  }
+
+  .mat-form-field-label {
+    color: $white !important;
+    // color: $mainColor!important;
+  }
+}

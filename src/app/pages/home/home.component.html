@@ -1,0 +1,63 @@
+<header class="container pt-5">
+  <div class="bg-image"
+    [ngStyle]="{'background-image': 'url(https://cdn-production.yooga.com.br/91cfa498be2ddca014d01c6b968a187a.jpeg)'}">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+
+    <main class="col-12 col-md-8">
+      <div class="profile px-5 mb-5">
+        <div class="row justify-content-center align-items-end">
+          <div class="col-12 col-lg-3">
+            <div class="profile-image" [ngStyle]="{'background-image': 'url(assets/images/logo-profile.png)'}">
+            </div>
+          </div>
+          <div class="col-12 col-lg-9">
+            <div class="row">
+              <div class="col profile-name">
+                OfficeCom Burgers
+              </div>
+            </div>
+            <div class="row">
+              <div class="col profile-description">
+                <span class="green">Aberto até às 23h30</span>
+                <lucide-icon name="dot"></lucide-icon>
+                <span>
+                  <lucide-icon name="map-pin"></lucide-icon>
+                  Campina Grande - PB
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ng-container *ngIf="menu.highlights">
+        <app-product-list [title]="'Destaques'" [products]="menu.highlights"
+          appScrollAnchor="highlights"></app-product-list>
+      </ng-container>
+
+      <ng-container *ngIf="menu.hamburgers">
+        <app-product-list [title]="'Burgers'" [products]="menu.hamburgers"
+          appScrollAnchor="hamburgers"></app-product-list>
+      </ng-container>
+
+      <ng-container *ngIf="menu.combos">
+        <app-product-list [title]="'Combos'" [products]="menu.combos" appScrollAnchor="combos"></app-product-list>
+      </ng-container>
+
+      <ng-container *ngIf="menu.drinks">
+        <app-product-list [title]="'Bebidas'" [products]="menu.drinks" appScrollAnchor="drinks"></app-product-list>
+      </ng-container>
+    </main>
+
+    <aside class="col-12 col-md-4 mt-3">
+      <app-cart></app-cart>
+    </aside>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

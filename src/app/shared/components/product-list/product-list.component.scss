@@ -1,0 +1,51 @@
+@import '../../../../assets/scss/variables';
+
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.product {
+
+  background-color: $white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 2px 0px rgba($black, .3);
+
+  &-name {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+
+    color: $text;
+  }
+
+  &-description {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+
+    color: $textLight;
+
+    max-height: 56px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    white-space: pre-wrap;
+  }
+
+  &-price {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+
+    color: $text;
+  }
+
+  &-photo {
+    width: 128px;
+    height: 128px;
+    border-radius: 1rem;
+  }
+}

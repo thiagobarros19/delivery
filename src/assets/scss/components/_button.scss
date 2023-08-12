@@ -1,0 +1,17 @@
+@import 'variables';
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+	///min-width: 100px !important;
+
+  .material-icons, .material-icons-outlined {
+    margin-top: -2px;
+  }
+
+	&.mat-icon-button {
+		min-width: unset !important;
+	}
+}
