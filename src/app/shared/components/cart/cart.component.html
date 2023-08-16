@@ -17,7 +17,7 @@
         <div class="row justify-content-between align-items-center px-3 mb-3">
           <div class="col-auto">Sua sacola</div>
           <div class="col-auto">
-            <button mat-button>Limpar</button>
+            <button mat-button (click)="clear()">Limpar</button>
           </div>
         </div>
         <ng-container *ngFor="let product of products">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="row">
                   <div class="col-12 product-remove-btn">
-                    <button mat-button>Remover</button>
+                    <button mat-button (click)="removeProduct(product.id)">Remover</button>
                   </div>
                 </div>
               </div>

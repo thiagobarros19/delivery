@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Product } from 'src/app/model/application';
+import { AddressService } from 'src/app/services/address.service';
 import { CartService } from 'src/app/services/cart.service';
 import { phoneMask } from '../../masks';
 
@@ -14,8 +15,15 @@ export class OrderComponent implements OnInit {
 
   public form!: FormGroup;
 
+	public maskPhone = {
+		guide: false,
+		mask: phoneMask
+	}
+
   constructor(
     private readonly _dialogRef: MatDialogRef<OrderComponent>,
+    private readonly _cartService: CartService,
+    private readonly _addressService: AddressService,
     private readonly _fb: FormBuilder
   ) { }
 
@@ -31,10 +39,22 @@ export class OrderComponent implements OnInit {
       city: [null, [Validators.required]],
       state: [null, [Validators.required]],
     })
+
+    this._getProducts();
   }
 
   get products(): Product[] {
     return this.form.get('products')?.value;
+  }
+
+  private _getProducts(): void {
+    this._cartService.getProducts()
+      .subscribe(res => this.form.patchValue({ products: res }));
+  }
+
+  public getAddress(cep: string): void {
+    this._addressService.getAddress(cep)
+      .subscribe(res => this.form.patchValue(res));
   }
 
   onCancelClick(): void {

@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ClickableDirective } from './clickable.directive';
+
+const directives = [
+  ClickableDirective
+];
 
 @NgModule({
-  declarations: [],
-  exports: [],
+  declarations: directives,
+  exports: directives,
   imports: [
     CommonModule
   ]
